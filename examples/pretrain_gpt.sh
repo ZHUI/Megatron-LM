@@ -6,14 +6,15 @@ export MASTER_PORT=6001
 RANK=0
 WORLD_SIZE=1
 
-DATA_PATH=/home/qiujinxuan/Megatron-LM/data_dir/my-gpt2_text_document
+DATA_PATH=/ssd1/zhonghui03/Megatron-LM/data_dir/my-gpt2_text_document
+#DATA_PATH=/home/qiujinxuan/Megatron-LM/data_dir/
 CHECKPOINT_PATH=./checkpoints
 
 
 python pretrain_gpt.py\
-       --num-layers 8 \
+       --num-layers 4 \
        --hidden-size 1024\
-       --num-attention-heads 16\
+       --num-attention-heads 4\
        --micro-batch-size 8 \
        --global-batch-size 8 \
        --seq-length 1024 \
