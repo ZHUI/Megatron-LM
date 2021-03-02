@@ -82,6 +82,7 @@ class _LambadaDataset(torch.utils.data.Dataset):
 
     def __init__(self, path, pad_idx, tokenizer, seq_len, strict=False):
         print_rank_0('> building lambada dataset from {} ...'.format(path))
+        print_rank_0('> building lambada dataset from {} ...'.format(strict))
         self.seq_len = seq_len
         self.pad_idx = pad_idx
         self.tokenizer = tokenizer
@@ -148,6 +149,7 @@ def _build_wikitext103_dataset():
     with open(args.valid_data[0], "rb") as reader:
         entire_data = reader.read().decode('utf-8')
     num_original_tokens = len(entire_data.strip().split(" "))
+    print(args.valid_data)
     entire_data = get_detokenizer(args.valid_data[0])(entire_data)
     tokenized_data = tokenizer.tokenize(entire_data)
     num_tokenized_tokens = len(tokenized_data)
