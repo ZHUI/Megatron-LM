@@ -3,8 +3,8 @@ TASK="LAMBADA"
 VALID_DATA=/ssd1/zhonghui03/models/PaddleNLP/examples/language_model/gpt2/eval_data/lambada_test.jsonl
 VOCAB_FILE=gpt2-vocab.json
 MERGE_FILE=gpt2-merges.txt
-#CHECKPOINT_PATH=/ssd1/zhonghui03/GPT2ModelCheckpoints
-CHECKPOINT_PATH=megatron_0010000
+CHECKPOINT_PATH=/ssd1/zhonghui03/GPT2ModelCheckpoints
+#CHECKPOINT_PATH=megatron_0010000
 COMMON_TASK_ARGS="--num-layers 24 \
                   --hidden-size 1024 \
                   --num-attention-heads 16 \

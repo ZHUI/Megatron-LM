@@ -802,7 +802,7 @@ def train(forward_step_func, model, optimizer, lr_scheduler,
                              lr_scheduler)
     while iteration < args.train_iters:
         update_num_microbatches(args.consumed_train_samples)
-        print("the learning_rate is {}".format(optimizer.state_dict()['param_groups'][0]['lr']))
+        #print("the learning_rate is {}".format(optimizer.state_dict()['param_groups'][0]['lr']))
         loss_dict, skipped_iter = train_step(forward_step_func,
                                              train_data_iterator,
                                              model,
